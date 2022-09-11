@@ -14,7 +14,7 @@ public class WeightForWeight {
         String[] numStringArr = inputString.trim().split(" ");
         Function<String, Integer> weightComparator = (s) -> Arrays.stream(s.split("")).mapToInt(Integer::parseInt).sum();
 
-        List<String> res = Arrays.stream(numStringArr).sorted(Comparator.comparing(weightComparator).thenComparing(Function.identity())).toList();
+        List<String> res = Arrays.stream(numStringArr).sorted(Comparator.comparing(weightComparator).thenComparing(Function.identity())).collect(Collectors.toList());
         return res.stream().collect(Collectors.joining(" "));
     }
 
