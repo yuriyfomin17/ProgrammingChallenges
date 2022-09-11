@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class TwoKnights {
+class Main {
 
     private static void calculateCombinations(long n) {
         long totalNumberOfCOmbinations = (n * n * (n * n - 1)) / 2;
