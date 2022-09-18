@@ -81,12 +81,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         InputStreamReader r = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(r);
-        int n = Integer.parseInt(br.readLine());
-        for (int i = 1; i <= n; i++) {
-            boardIntizialization(i);
-            findAllComobinations(0);
-            System.out.println(count);
+        int N = Integer.parseInt(br.readLine());
+//        for (int i = 1; i <= n; i++) {
+//            boardIntizialization(i);
+//            findAllComobinations(0);
+//            System.out.println(count);
+//        }
+        for (long n = 1; n <= N; n++) {
+
+            long result = ((n * n * (n * n - 1)) / 2 ) - (4 * (n - 1) * (n - 2));
+            System.out.println(result);
         }
+
 
     }
 
